@@ -1,8 +1,8 @@
 import numpy as np
 
 def sigmoid(x):
-    score =  [ 1/float(1+np.exp(-item)) for item in x ]
-    return score
+    x = 1/(1+np.exp(-x))
+    return x
 
 def softmax(x):
     exps = np.exp(x)
