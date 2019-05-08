@@ -15,6 +15,7 @@ if __name__ == "__main__":
     x0 = torch.randn(3)
     x = nn.Sigmoid()(x0)
     y = torch.FloatTensor(3).random_(2)
+    y1 = torch.zeros(3)
 
     print("x: {}".format(x))
     print("y: {}".format(y))
@@ -34,3 +35,10 @@ if __name__ == "__main__":
     print("**********************************************************")
     print("Pytorch BCELoss: {}".format(nn.BCELoss(reduction='none')(x, y)))
     print("Python PBCELoss: {}".format(PBCELoss(x.numpy(), y.numpy(), average=False)))
+
+    print("**************************************************")
+    x0 = torch.randn(3)
+    x = nn.Sigmoid()(x0)
+    print("x: {}".format(x))
+    print("y1: {}".format(y1))
+    print("Pytorch BCELoss: {}".format(nn.BCELoss()(x, y1)))
