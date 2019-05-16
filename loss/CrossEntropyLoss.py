@@ -16,6 +16,8 @@ def PCrossEntropyLoss(x,y, average=True):
 if __name__ == "__main__":
     x = torch.randn(2,4)
     y = torch.LongTensor(2).random_(4)
+    print("x: {}".format(x))
+    print("y: {}".format(y))
     print("Pytorch CrossEntropy loss: {}".format(nn.CrossEntropyLoss()(x,y)))
     print("Python CrossEntropy loss: {}".format(PCrossEntropyLoss(x.numpy(),y.numpy())))
 
