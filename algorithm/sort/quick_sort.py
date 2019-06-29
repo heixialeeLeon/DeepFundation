@@ -12,11 +12,10 @@ def quickSortHelper(alist,first,last):
 
 
 def partition(alist,first,last):
+   print("first: {}, last: {}".format(first,last))
    pivotvalue = alist[first]
-
    leftmark = first+1
    rightmark = last
-
    done = False
    while not done:
 
@@ -32,6 +31,7 @@ def partition(alist,first,last):
            temp = alist[leftmark]
            alist[leftmark] = alist[rightmark]
            alist[rightmark] = temp
+       print("while: {}".format(alist))
 
    temp = alist[first]
    alist[first] = alist[rightmark]
