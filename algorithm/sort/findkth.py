@@ -25,10 +25,10 @@ def findkth(num, low, high, k):  # 找到数组里第k个数
     if index < k:
         return findkth(num, index + 1, high, k)
     else:
-        return findkth(num, low, index - 1, 1)
+        return findkth(num, low, index - 1, k)
 
 
 pai = [2, 3, 1, 5, 4, 6]
 # quicksort(pai, 0, len(pai) - 1)
 
-print(findkth(pai, 0, len(pai) - 1, 5))
+print(findkth(pai, 0, len(pai) - 1, 4))
